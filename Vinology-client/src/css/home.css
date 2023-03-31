@@ -1,0 +1,13 @@
+#logo {
+    content: url('../assets/home-img.png'); 
+    margin: auto;
+    
+  }
+
+  .home-wrapper {
+    width: 450px;
+    max-height: 80px;
+    min-height: 600px;
+    margin: auto;
+  }
+

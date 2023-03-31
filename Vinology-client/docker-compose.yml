@@ -1,0 +1,12 @@
+version: "3.8"
+services: 
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/Vinology-client
+    ports:
+      - 3001:3001
+    image: app:react
+    container_name: vinology-client
+    command: npm start
