@@ -1,46 +1,18 @@
-# About VINOLOGY
-VINOLOGY is an application designed to provide information about a vehicle based on the data associated with its VIN Number.
+# Containarizing the app Vinology: https://github.com/ccdaniele/vinology 
 
-The VIN number serves as the social security number of a vehicle, every time that any procedure is carried out before a public entity, insurance company, purchase and sale of vehicles and even any major repair, this information can be associated with the VIN number.
+Orchestrator: Kubernetes
 
-VINOLOGY extracts this information by connecting to 4 different APIs.
+Container runtime: docker
 
-The frontend uses REACT-REDUX and has the responsibility of managing the UX and making requests to APIs. The backend uses RUBY ON RAILS / PSQL and is structured through 3 models (User, Query, Cars). The responsibility of the backend is the user authentication using JWT and store the information within the user's account.
+OS: linux 
 
-In VINOLOGY, the user can create his/her account, create a query, add, edit and delete different vehicles to the query and check codes using the code searcher thats allows the user extract specifical information about the state of the vehicle. At the same time the user can make different types of reports, download them in PDF and save it in the user's account.
+Development environment: GKE
 
-VINOLOGY video example https://youtu.be/oEXVyASkCEE
+Summary: 
 
-# Requirements:
+Vinology is an application built on react for the frontend, ruby rails as the backend, and postgresDB. 
 
-## Server:
-- Ruby version +2.7 (set local version in the gemfile)
-- Ruby on rails
-- SQlite
+In this repository we are creating two deployments for the client and the backend. 
 
-### Install / Update Gems
+We are adding a local service for the internal requests and a ingress-control for reaching the frontend. 
 
-```{console}
-$ bundle install 
-$ bundle update
-```
-
-### Initialize Database
-```{console}
-$ rails db:create
-$ rails db:migrate
-```
-Seed Data
-```{console}
-$ rails db:seed
-```
-
-Run the Server
-```{console}
-$ rails s
-```
-### Initialize and Serve Frontend
-```{console}
-$ npm install && update
-$ npm start
-```
