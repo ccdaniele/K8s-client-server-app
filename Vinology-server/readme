@@ -1,5 +1,0 @@
-docker run \
--p 3000:3000 \
---net vinologynet \
---name vinology-server \
-vinology-server
