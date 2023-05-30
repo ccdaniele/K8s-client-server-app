@@ -1,6 +1,0 @@
-docker run \
--p 3001:3001 \
---link=vinology-server \
---net vinologynet \
---name vinology-client \
-ccdaniele/vinology-client
