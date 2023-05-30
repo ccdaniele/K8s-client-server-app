@@ -1,0 +1,12 @@
+version: "3.8"
+services: 
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/Vinology-client
+    ports:
+      - 3001:3001
+    image: ccdaniele/vinclient1.0.1-noendenv-api-3002
+    container_name: vinology-client
+    command: npm start

@@ -1,12 +1,19 @@
-version: "3.8"
 services: 
-  app:
-    build:
-      context: .
-    volumes:
-      - .:/Vinology-client
-    ports:
+   client:
+      build: .
+      ports:
       - 3001:3001
-    image: app:react
-    container_name: vinology-client
-    command: npm start
+      image: 1.0.1-l-api-3002
+      networks: 
+         - client
+      container_name: client
+         
+   api:
+      build: . 
+      image: nginx-api:v1
+      ports:
+         - 80:80
+      networks: 
+         - client
+networks: 
+   client:
